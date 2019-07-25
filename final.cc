@@ -89,6 +89,7 @@ int main (){
   lrWpanHelper.EnableAsciiAll (ascii.CreateFileStream ("final.tr"));
   AnimationInterface anim ("final.xml");
   anim.SetMobilityPollInterval(Seconds(0.01));
+  anim.SetMaxPktsPerTraceFile(99999999999999);
   Simulator::Run ();
   Simulator::Destroy ();
 }
